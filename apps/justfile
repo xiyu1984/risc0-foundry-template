@@ -1,0 +1,8 @@
+build:
+    cargo build -r
+
+convert +ARGS:
+    RUST_LOG=info ./target/release/convert {{ARGS}}
+
+image +ARGS:
+    RUST_LOG=info ./target/release/calc_imageid {{ARGS}}
